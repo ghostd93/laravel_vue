@@ -14,3 +14,6 @@
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('/add-to-basket/{product}', 'HomeController@addToBasket')->name('addToBasket');
+Route::get('/get-basket', 'HomeController@getBasket')->name('getBasket');
+Route::get('/quantity-product/{id}/{quantity}', 'HomeController@quantityProduct')->name('quantityProduct');

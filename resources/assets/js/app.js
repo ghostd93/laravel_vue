@@ -6,8 +6,10 @@
  */
 
 require('./bootstrap');
+import store from './store';
 
 window.Vue = require('vue');
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -15,8 +17,10 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
+Vue.component('add-to-basket', require('./components/AddToBasket.vue'));
+Vue.component('basket', require('./components/Basket.vue'));
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    store,
 });
